@@ -9,15 +9,25 @@
     <!-- Frameworks -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-upper">
         <div class="container">
-                <a class="navbar-brand" href="index.html"></a>
-                <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="col">
+                    <a class="navbar-brand" href="index.html"></a>
+            </div>
+            <div class="btn-group actions" role="group" aria-label="Basic example">
+                <button class="btn btn-link user"><i data-feather="user"></i></button>
+                <button class="btn btn-link search"><i data-feather="search"></i></button>
+                <button class="btn btn-link localization"><i data-feather="globe"></i></button>
+            </div>
+
+            <button class="btn btn-link navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i>
+            </button>
+
     
         </div>
     </nav>    
@@ -78,11 +88,10 @@
     </nav>    
     <!-- Home Hero -->
     <main role="main">
-
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -92,11 +101,11 @@
                             <div class="d-block w-100 slide second"></div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -104,11 +113,40 @@
     </main>
     <!-- Social icons -->
 
+    <!-- Col of Threes -->
+    <div class="container">
+        <div class="row cardRows">
+            <div class="col-lg">
+                <a class="homeCard">
+                    <div class="icon"><span class="inner"><i data-feather="eye"></i></span></div>
+                    <div class="heading">Optici partenere</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo tincidunt, lobortis neque vitae, semper metus. Aliquam sagittis, felis vel sodales ornare, metus risus ornare ante, pretium mattis sapien ipsum eget felis. </div>
+                </a>
+            </div>
+            <div class="col-lg">
+                <a class="homeCard" href="">
+                    <div class="icon"><span class="inner"><i data-feather="monitor"></i></span></div>
+                    <div class="heading">Site-uri partenere</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo tincidunt, lobortis neque vitae, semper metus. Aliquam sagittis, felis vel sodales ornare, metus risus ornare ante, pretium mattis sapien ipsum eget felis. Cras eu facilisis nibh, ac congue quam. Integer finibus pharetra pretium. </div>
+                </a>
+            </div>
+            <div class="col-lg">
+                <a class="homeCard" href="">
+                    <div class="icon"><span class="inner"><i data-feather="users"></i></span></div>
+                    <div class="heading">Ambasadori</div>
+                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo tincidunt, lobortis neque vitae, semper metus. Aliquam sagittis, felis vel sodales ornare, metus risus ornare ante, pretium mattis sapien ipsum eget felis. Cras eu facilisis nibh, ac congue quam. Integer finibus pharetra pretium. </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script src="node_modules/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace()</script>
 
     <!-- Scripts:dev // not needed for production -->
     <script src="node_modules/holderjs/holder.min.js"></script>

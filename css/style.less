@@ -4,9 +4,13 @@
 */
 
 // Variables - Color 
+@gray-xlt:      #FAFAFA;
+@gray-lt:       #E0E0E0;
+@gray-md:       #9E9E9E;
 
-@gray-lt: #E0E0E0;
-@gray-md: #9E9E9E;
+@black-default: #212529;
+
+@brand-primary: #26B1BD;
 
 // Variables - breakpoints
 
@@ -14,6 +18,9 @@
 @bp-med:    768px;
 @bp-large:  992px;
 @bp-huge:   1200px;
+
+// Variables - misc
+@trans:    all 0.15s cubic-bezier(0.33,0.66,0.66,1); 
 
 // General overrides
 
@@ -43,8 +50,15 @@
         }
     }
 
+    .btn-link {
+        color: @gray-md;
+    }
+
     .navbar-toggler {
         margin-right: 24px;
+        border: none;
+        padding: .375rem .75rem;
+        line-height: 1.25;
     }
 
 }
@@ -55,6 +69,70 @@
 }
 
 // Home
+
+.cardRows {
+    @media screen and (min-width: @bp-large) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 72px 0 36px 0;    
+    }
+
+    .col-lg {
+        @media screen and (max-width: @bp-large) {
+            margin: 72px 0 12px 0;
+        }
+    
+    }
+}
+
+.homeCard {
+    background: @gray-xlt;
+    padding: 0 24px 24px 24px;
+    display: block;
+    border: 1px solid @gray-lt;
+    border-radius: 2px;
+    height: 100%;
+    transition: @trans;
+    text-decoration: none;
+    color: @black-default;
+    .icon {
+        text-align: center;
+        margin-bottom: 48px;
+        position: relative;
+        top: -9px;
+        color: @black-default;
+
+        .inner {
+            background: #fff;
+            padding: 29px 24px 19px 24px;
+            border: solid 2px @brand-primary;
+            border-radius: 999px;
+        }
+    }
+
+    .heading {
+        font-weight: bold;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    &:hover {
+        background: @brand-primary;
+        color: #fff;
+        border-color: @brand-primary;
+        box-shadow: 0px 2px 36px 0px fade(@brand-primary, 30%);
+        text-decoration: none;
+
+        .heading, .content {
+            color: #fff;
+        }
+
+        .icon {
+            color: @black-default
+        }
+    }
+}
 
 // Carousel 
 
