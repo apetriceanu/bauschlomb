@@ -1,0 +1,84 @@
+/*
+    Bausch + Lomb Romania
+    apetriceanu // 2017.11
+*/
+
+// Variables - Color 
+
+@gray-lt: #E0E0E0;
+@gray-md: #9E9E9E;
+
+// Variables - breakpoints
+
+@bp-small:  576px;
+@bp-med:    768px;
+@bp-large:  992px;
+@bp-huge:   1200px;
+
+// General overrides
+
+// Typography
+
+// Navigation 
+
+.navbar-upper {
+    z-index: 2;
+
+    @media screen and (min-width: @bp-large) {
+        padding: 36px 0;
+        border-bottom: 1px solid @gray-lt;    
+    }
+
+    .navbar-brand {
+        background: url(../img/logo_bauschlomb.svg) center no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 297px;
+        height: 64px;
+
+        @media screen and (max-width: @bp-med) {
+            background-image: url(../img/logo_bauschlomb_mini.svg);
+            width: 48px;
+            margin-left: 24px;
+        }
+    }
+
+    .navbar-toggler {
+        margin-right: 24px;
+    }
+
+}
+
+.navbar-lower {
+    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+// Home
+
+// Carousel 
+
+.carousel-indicators {
+    justify-content: right;
+}
+
+.carousel-inner {
+
+    .slide {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 480px;
+    }
+
+    .slide.first {
+        background-image: url(../img/home_hero_1.jpg);
+    }
+
+    .slide.second {
+        background-image: url(../img/home_hero_2.jpg);
+    }
+
+}
+
+
