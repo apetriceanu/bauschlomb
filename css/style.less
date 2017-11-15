@@ -7,6 +7,7 @@
 @gray-xlt:      #FAFAFA;
 @gray-lt:       #E0E0E0;
 @gray-md:       #9E9E9E;
+@gray-dk:       #212529;
 
 @black-default: #212529;
 
@@ -51,15 +52,25 @@
         }
     }
 
-    .btn-link {
-        color: @gray-md;
+    .actions .btn-link, .navbar-toggler {
+            color: @gray-md;
+            transition: @trans;
+            cursor: pointer;
+            border: none;
+            padding: .375rem .75rem;
+            line-height: 1.25;
+
+            &:hover {
+                color: @brand-primary;
+            }
+
+            &:active, &:focus {
+                color: @gray-dk;
+            }
     }
 
     .navbar-toggler {
         margin-right: 24px;
-        border: none;
-        padding: .375rem .75rem;
-        line-height: 1.25;
     }
 
 }
@@ -71,6 +82,32 @@
     @media screen and (max-width: @bp-large) {
         padding: 0;
     }
+
+    .dropdown-menu {
+        transition: @trans;
+    }
+
+    .dropdown-item.active, 
+    .dropdown-item:active {
+        background-color: @brand-primary;
+    }
+}
+
+// Footer
+
+footer {
+    margin: 72px 0 48px 0;
+    padding: 48px 0;
+    border-top: 1px solid @gray-lt;
+
+    .col.links {
+        text-align: right;
+
+        .btn-link {
+            color: @brand-primary;
+            transition: @trans;
+        }
+    }
 }
 
 // Home
@@ -78,7 +115,6 @@
 .socialRow {
     text-align: center;
     margin: 48px 0;
-
 
     .social {
         width: 64px;
@@ -134,6 +170,7 @@
     transition: @trans;
     text-decoration: none;
     color: @black-default;
+
     .icon {
         text-align: center;
         margin-bottom: 48px;
@@ -194,7 +231,4 @@
     .slide.second {
         background-image: url(../img/home_hero_2.jpg);
     }
-
 }
-
-
