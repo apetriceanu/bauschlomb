@@ -21,9 +21,9 @@
             <div class="col">
                     <a class="navbar-brand" href="index.html"></a>
             </div>
-            <div class="btn-group actions" role="group" aria-label="Basic example">
-                <button class="btn btn-link user"><i data-feather="user"></i></button>
-                <button class="btn btn-link search"><i data-feather="search"></i></button>
+            <div class="btn-group actions" role="group" aria-label="Secondary nav">
+                <button class="btn btn-link user"  data-toggle="modal" data-target="#loginModal"><i data-feather="user"></i></button>
+                <button class="btn btn-link search" data-toggle="modal" data-target="#searchModal"><i data-feather="search"></i></button>
                 <a class="btn btn-link localization" href="http://www.bausch.com/" target="_blank"><i data-feather="globe"></i></a>
             </div>
 
@@ -107,13 +107,8 @@
                                             <a class="dropdown-item" href="#">Contact</a>
                                             </div>
                                         </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Noutati
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#"></a>
-                                            </div>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Noutati</a>
                                         </li>
                                 </ul>        
                             </div>
@@ -193,6 +188,67 @@
         </row>
         
     </footer>
+
+    <!-- Modals -->
+
+    <div class="modal fade fromTop" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-6 col-md-8 col-sm-12">
+                        <form action="" class="">
+                            <div class="form-row align-items-center">
+                                <div class="col">
+                                    <label for="loginUser">Username</label>
+                                    <input type="text" class="form-control mb-2 mb-sm-0" id="loginUser" placeholder="Username">
+                                </div>
+                                <div class="col">
+                                    <label for="loginPass">Parola</label>
+                                    <input type="password" class="form-control mb-2 mb-sm-0" id="loginPass" placeholder="Parola">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="button">Intra</button>
+                                </div>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="modal fade fromTop" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-6 col-md-8 col-sm-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cauta" aria-label="Cauta">
+                            <span class="input-group-btn">
+                              <button class="btn btn-primary" type="button"><i data-feather="search"></i></button>
+                            </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Scripts -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
