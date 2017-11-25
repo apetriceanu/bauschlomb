@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home - Bausch + Lomb</title>
+    <title>Produse - Bausch + Lomb</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Frameworks -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/chocolat/dist/css/chocolat.css">    
+    <link rel="stylesheet" href="node_modules/chocolat/dist/css/chocolat.css">
     <link rel="stylesheet" href="css/style.css">
 
 
 </head>
 <body>
+    <div class="bgHelper left"></div>
+    <div class="bgHelper right"></div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-upper">
         <div class="container">
@@ -118,63 +120,115 @@
                     </div>                  
         </div>
     </nav>    
-    <!-- Home Hero -->
-    <main role="main">
-        <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#homeCarousel" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-block w-100 slide first"></div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-block w-100 slide second"></div>
-                </div>
+   
+    <div class="container subpage">
+        <div class="row product">
+            <div class="col-md-3 chocolat-parent" data-chocolat-title="title">
+                    <a class="chocolat-image" href="img/product.jpg" title="SofLens Natural Colors">
+                        <img width="100%" src="img/product.jpg" />
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </main>
-    <div class="container">
-        <!-- Social icons -->
-        <div class="row socialRow">
-            <div class="col-sm">
-                <a href="" class="social mail"></a>
-                <a href="" class="social fb"></a>
-                <a href="" class="social insta"></a>
-            </div>
-        </div>
+            <div class="col-md-6">
+                <div class="title">SofLens Natural Colors</div>
+                <div class="description">
+                    <p>Lentilele de contact cosmetice Bausch + Lomb SofLens® Natural Colors iti schimba in mod natural culoarea ochilor, indiferent de ocazie sau de starea ta de spirit. Aceste lentile sunt realizate dintr-un material rezistent la depunerile proteice, cu un sistem avansat si exclusiv de imprimare, pentru a asigura o culoare naturala, in 10 nuante extraordinare. Gama de lentile SofLens® Natural Colors este disponibila si in varianta cu dioptrii.</p>
+                    <p>Schimba-ti infatisarea si fii remarcata in orice moment, pentru ca SofLens® Natural Colors sunt lentilele care te fac sa te simti unica in orice ocazie!</p>
+                </div>
+                <div class="infobox">
+                    <span class="title mx-auto">Caracteristici Principale si Avantaje</span>
+                    <div class="content">
+                        <ul class="check">
+                            <li>10 nuante extraordinare cu aspect natural</li>
+                            <li>Datorita tehnologiei de imprimare, culoarea este acum inserata in material, oferind astfel un confort sporit, de lunga durata.</li>
+                            <li>Durabilitate, material rezistent la depuneri, pentru un confort excelent</li>
+                            <li>Manipulare usoara</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Cards -->
-        <div class="row cardRows">
-            <div class="col-lg">
-                <a class="homeCard">
-                    <div class="icon"><span class="inner"><i data-feather="eye"></i></span></div>
-                    <div class="heading">Optici partenere</div>
-                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo tincidunt, lobortis neque vitae, semper metus. Aliquam sagittis, felis vel sodales ornare, metus risus ornare ante, pretium mattis sapien ipsum eget felis. </div>
-                </a>
+                <div class="infobox">
+                    <div class="title">Informatii Detaliate despre Produs</div>
+                    <div class="content">
+                        <p>> Ghidul purtatorului de lentile de contact</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg">
-                <a class="homeCard" href="">
-                    <div class="icon"><span class="inner"><i data-feather="monitor"></i></span></div>
-                    <div class="heading">Site-uri partenere</div>
-                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo tincidunt, lobortis neque vitae, semper metus. Aliquam sagittis, felis vel sodales ornare, metus risus ornare ante, pretium mattis sapien ipsum eget felis. Cras eu facilisis nibh, ac congue quam. Integer finibus pharetra pretium. </div>
-                </a>
-            </div>
-            <div class="col-lg">
-                <a class="homeCard" href="">
-                    <div class="icon"><span class="inner"><i data-feather="users"></i></span></div>
-                    <div class="heading">Ambasadori</div>
-                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo tincidunt, lobortis neque vitae, semper metus. Aliquam sagittis, felis vel sodales ornare, metus risus ornare ante, pretium mattis sapien ipsum eget felis. Cras eu facilisis nibh, ac congue quam. Integer finibus pharetra pretium. </div>
-                </a>
+            <div class="col-md-3 submenu_vertical">
+                <div class="heading">Produse</div>
+                <div id="accordion" role="tablist">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Miopie / hipermetropie
+                            </a>
+                        </h5>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="true">Biotrue ONE day</a>
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">PureVision2 HD</a>
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">PureVision</a>
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">SofLens Daily disposable</a>
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">SofLens 59</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Prezbiopia
+                            </a>
+                        </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">PureVision2 for Presbyopia</a>
+                                <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">PureVision Multi-Focal</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Astigmatism
+                            </a>
+                        </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">PureVision2 HD for Astigmatism</a>
+                                    <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">PureVision Toric</a>
+                                    <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">Soflens daily disposable toric for Astigmatism</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFour">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Cosmetice
+                            </a>
+                        </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">SofLens Natural Colors</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -258,16 +312,15 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
     
-    
     <script src="node_modules/feather-icons/dist/feather.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.chocolat-parent').Chocolat();
-
-            feather.replace();
-        });
+            $(document).ready(function(){
+                $('.chocolat-parent').Chocolat();
+    
+                feather.replace();
+            });
     </script>
-
+    
     <!-- Scripts:dev // not needed for production -->
     <script src="node_modules/holderjs/holder.min.js"></script>
 
