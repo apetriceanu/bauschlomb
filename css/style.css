@@ -12,31 +12,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-.bgHelper {
-  height: 100%;
-  position: fixed;
-  z-index: -5;
-}
-.bgHelper.left {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), #ffffff), url(../img/bg_left.jpg);
-  background-position: top left, top left;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, auto;
-  width: 25%;
-}
-.bgHelper.right {
-  right: 0;
-  background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.5)), url(../img/bg_right.jpg);
-  background-position: top right, top right;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, auto;
-  width: 40%;
-}
-@media screen and (max-width: 768px) {
-  .bgHelper {
-    display: none;
-  }
-}
 .navbar-upper {
   z-index: 2;
   padding: 0;
@@ -84,7 +59,6 @@ body {
   margin-right: 24px;
 }
 .navbar-lower {
-  box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 @media screen and (max-width: 992px) {
@@ -260,6 +234,35 @@ footer .col.links .btn-link {
 .homeCard:hover .icon {
   color: #212529;
 }
+.prodCard {
+  padding: 24px;
+  display: block;
+  border-radius: 2px;
+  height: 100%;
+  transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+  text-decoration: none;
+  color: #212529;
+  box-shadow: 0px 2px 12px 0px rgba(97, 97, 97, 0.5);
+  text-align: center;
+}
+.prodCard .icon {
+  text-align: center;
+  margin-bottom: 48px;
+  color: #26B1BD;
+  margin-top: 24px;
+}
+.prodCard .icon .inner {
+  background: #fff;
+  padding: 29px 24px 19px 24px;
+}
+.prodCard .icon .inner .feather {
+  transform: scale(2);
+}
+.prodCard .heading {
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
 .carousel-indicators {
   justify-content: right;
 }
@@ -341,4 +344,71 @@ footer .col.links .btn-link {
   height: 16px;
   vertical-align: top;
   margin-top: 5px;
+}
+.productMain .hero-outer {
+  background: linear-gradient(to bottom right, #26B1BD, #009aa6);
+  padding: 72px 48px;
+  margin: 48px 33px;
+  color: #fff;
+}
+.productMain .hero-outer.bg1 {
+  background: url(../img/prod_largebg_plane.jpg) center no-repeat;
+  background-size: cover;
+}
+.productMain .hero-outer .productName {
+  font-size: 48px;
+  font-weight: bold;
+}
+.productMain .hero-outer .productName::after {
+  display: block;
+  content: '';
+  height: 6px;
+  width: 48px;
+  background: #26B1BD;
+  margin: 24px 0 48px 0;
+}
+.productMain .hero-outer .subtitle {
+  margin-bottom: 48px;
+  font-size: 28px;
+  font-family: Georgia, serif;
+}
+.productMain .hero-outer .description {
+  margin-right: 720px;
+}
+@media screen and (max-width: 1400px) {
+  .productMain .hero-outer .description {
+    margin-right: 480px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .productMain .hero-outer .description {
+    margin-right: 0;
+  }
+}
+.productMain .productImage {
+  width: 640px;
+  height: 480px;
+  position: relative;
+  right: 69px;
+  float: right;
+  top: -360px;
+  margin-bottom: -420px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1400px) {
+  .productMain .productImage {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .productMain .productImage {
+    float: none;
+    right: 0;
+    top: 0;
+    margin: 36px 33px;
+    height: 360px;
+    width: auto;
+  }
 }

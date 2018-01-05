@@ -53,33 +53,6 @@ body {
 
 // General UI
 
-.bgHelper {
-    height: 100%;
-    position: fixed;
-    z-index: -5;
-    
-    &.left {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(../img/bg_left.jpg);
-        background-position: top left, top left;
-        background-repeat: no-repeat, no-repeat;
-        background-size: cover, auto;
-        width: 25%;
-    }
-
-    &.right {
-        right: 0;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url(../img/bg_right.jpg);
-        background-position: top right, top right;
-        background-repeat: no-repeat, no-repeat;
-        background-size: cover, auto;
-        width: 40%;
-    }
-
-    @media screen and (max-width: @bp-med) {
-        display: none;
-    }
-}
-
 // Navigation 
 
 .navbar-upper {
@@ -128,7 +101,7 @@ body {
 }
 
 .navbar-lower {
-    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, .3);
+    // box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, .3);
     z-index: 1;
 
     @media screen and (max-width: @bp-large) {
@@ -348,6 +321,40 @@ footer {
     }
 }
 
+.prodCard {
+    padding: 24px;
+    display: block;
+    border-radius: 2px;
+    height: 100%;
+    transition: @trans;
+    text-decoration: none;
+    color: @black-default;
+    box-shadow: 0px 2px 12px 0px fade(@gray-dk, 50%);
+    text-align: center;
+
+    .icon {
+        text-align: center;
+        margin-bottom: 48px;
+        color: @brand-primary;
+        margin-top: 24px;
+
+        .inner {
+            background: #fff;
+            padding: 29px 24px 19px 24px;
+
+            .feather {
+                transform: scale(2);
+            }
+        }
+    }
+
+    .heading {
+        font-weight: bold;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+}
+
 // Carousel 
 
 .carousel-indicators {
@@ -459,4 +466,90 @@ footer {
     height: 16px;
     vertical-align: top;
     margin-top: 5px;
+}
+
+// Product Page 2
+
+.productMain {
+    .hero-outer {
+        background: linear-gradient(to bottom right, @brand-primary, @brand-dk);
+        padding: 72px 48px;
+        margin: 48px 33px;
+        color: @white;
+
+        &.bg1 {
+            background: url(../img/prod_largebg_plane.jpg) center no-repeat;
+            background-size: cover;
+        }
+
+        .productName {
+            font-size: 48px;
+            font-weight: bold;
+
+            &::after {
+                display: block;
+                content: '';
+                height: 6px;
+                width: 48px;
+                background: @brand-primary;
+                margin: 24px 0 48px 0;
+            }
+        }
+
+        .subtitle {
+            margin-bottom: 48px;
+            font-size: 28px;
+            font-family: Georgia, serif;
+            
+        }
+
+        .description {
+            margin-right: 720px;
+
+            
+            @media screen and (max-width: 1400px) {
+                margin-right: 480px;
+            }
+
+            @media screen and (max-width: @bp-huge) {
+                margin-right: 0;
+                
+            }
+
+
+        }
+    }
+
+    .productImage {
+        width: 640px;
+        height: 480px;
+        position: relative;
+        right: 69px;
+        float: right;
+        top: -360px;
+        margin-bottom: -420px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        
+        @media screen and (max-width: 1400px) {
+            width: 360px;
+        }
+
+        @media screen and (max-width: @bp-huge) {
+            float: none;
+            right: 0;
+            top: 0;
+            margin: 36px 33px;
+            height: 360px;
+            width: auto;
+
+            
+        }
+
+
+
+        
+    }
 }
