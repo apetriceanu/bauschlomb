@@ -6,8 +6,11 @@
 // Variables - Color 
 @gray-xlt:      #FAFAFA;
 @gray-lt:       #ECF2F6;
+@gray-dlt:      #bdbdbd;
 @gray-md:       #9E9E9E;
 @gray-dk:       #616161;
+
+@gray-alt:      #f9fafb;
 
 @white:         #fff;
 @black-default: #212529;
@@ -37,31 +40,32 @@
     }
 }
 
-// body.has_bg {
-//     background-image: url(../img/bg_left.jpg), url(../img/bg_right.jpg);
-//     background-position: center left, center right;
-//     background-size: contain contain;
-//     background-repeat: no-repeat, no-repeat;
-
-// }
-
 // Typography
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Catamaran', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
 // General UI
 
+.container-fluid {
+    @media screen and (min-width: @bp-huge) {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+
+
 // Navigation 
 
-.navbar-upper {
-    z-index: 2;
-    padding: 0;
+.navbar {
+    font-family: Catamaran, Arial, sans-serif;
 
-    @media screen and (min-width: @bp-large) {
-        padding: 36px 0;
-        border-bottom: 1px solid @gray-lt;    
+    @media screen and (min-width: @bp-huge) {
+        padding: 24px 48px;
     }
 
     .navbar-brand {
@@ -95,26 +99,29 @@ body {
             }
     }
 
-    .navbar-toggler {
-        margin-right: 24px;
-    }
-}
+    .navbar-nav {
+        .nav-item {
+            font-weight: bold;
+            transition: @trans;
+            font-size: 1.2em;
 
-.navbar-lower {
-    // box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, .3);
-    z-index: 1;
+            .nav-link {
+                transition: @trans;
+                &:hover {
+                    color: @brand-primary;
+                }
+            }
+        }
 
-    @media screen and (max-width: @bp-large) {
-        padding: 0;
-    }
-
-    .dropdown-menu {
-        transition: @trans;
-    }
-
-    .dropdown-item.active, 
-    .dropdown-item:active {
-        background-color: @brand-primary;
+        .dropdown-menu {
+            transition: @trans;
+        }
+    
+        .dropdown-item.active, 
+        .dropdown-item:active {
+            background-color: @brand-primary;
+        }
+    
     }
 }
 
@@ -208,9 +215,17 @@ body {
 // Footer
 
 footer {
-    margin: 72px 0 48px 0;
+    margin-top: 72px;
     padding: 48px 0;
     border-top: 1px solid @gray-lt;
+    background: @gray-alt;
+
+
+    .logo {
+        background: url(../img/logo_bauschlomb.svg) left center no-repeat;
+        height: 16px;
+        margin-bottom: 18px;
+    }
 
     .col.links {
         text-align: right;
@@ -257,69 +272,85 @@ footer {
 }
 
 .cardRows {
+    background: @white;
+
     @media screen and (min-width: @bp-large) {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        margin: 72px 0 36px 0;    
+        margin-bottom: 36px;
+    }
+
+    .card {
+        height: 100%;
+        padding: 36px 18px;
+        border: 0;
+        border-radius: 0;
+        transition: @trans;
+        background: @gray-alt;
+        
+        .icon  {
+            .feather {
+                transform: scale(2, 2);
+                margin-left: 14px;
+                margin-bottom: 24px;
+                color: @gray-md;
+
+                @media screen and (min-width: @bp-huge) {
+                    transform: scale(3, 3);
+                    color: @gray-dlt;
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        .heading {
+            font-weight: 900;
+            font-size: 2em;
+            margin-bottom: 24px;
+            color: @brand-primary;
+        }
+
+        .content {
+            color: @gray-dk;
+        }
+
+
+        @media screen and (min-width: @bp-huge) {
+            padding: 72px 36px;
+        }
+
+        &:hover {
+            background: @brand-primary;
+            text-decoration: none;
+
+
+            .icon .feather {
+                color: @brand-dk;
+            }
+
+            .heading {
+                color: @brand-xdk;
+            }
+
+            .content {
+                color: @white;
+            }
+        }
+
+
     }
 
     .col-lg {
         @media screen and (max-width: @bp-large) {
-            margin: 72px 0 12px 0;
+            margin-top: 72px;
+            margin-bottom: 12px;
+            color: @white;
         }
     
     }
 }
 
-.homeCard {
-    background: @gray-xlt;
-    padding: 0 24px 24px 24px;
-    display: block;
-    border: 1px solid @gray-lt;
-    border-radius: 2px;
-    height: 100%;
-    transition: @trans;
-    text-decoration: none;
-    color: @black-default;
-
-    .icon {
-        text-align: center;
-        margin-bottom: 48px;
-        position: relative;
-        top: -9px;
-        color: @black-default;
-
-        .inner {
-            background: #fff;
-            padding: 29px 24px 19px 24px;
-            border: solid 2px @brand-primary;
-            border-radius: 999px;
-        }
-    }
-
-    .heading {
-        font-weight: bold;
-        margin-bottom: 12px;
-        text-align: center;
-    }
-
-    &:hover {
-        background: @brand-primary;
-        color: #fff;
-        border-color: @brand-primary;
-        box-shadow: 0px 2px 36px 0px fade(@brand-primary, 30%);
-        text-decoration: none;
-
-        .heading, .content {
-            color: #fff;
-        }
-
-        .icon {
-            color: @black-default
-        }
-    }
-}
 
 .prodCard {
     padding: 24px;
@@ -363,11 +394,69 @@ footer {
 
 .carousel-inner {
 
-    .slide {
+    .carousel-item {
+        height: 480px;
+        
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        min-height: 480px;
+
+        @media screen and (min-width: @bp-huge) {
+            height: 720px;
+        }
+
+        .content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .heading {
+                font-weight: 900;
+                font-size: 64px;
+                color: @white;
+                margin-left: 24px;
+
+                @media screen and (min-width: @bp-huge) {
+                    font-size: 96px;
+                    margin-left: 72px;
+                }
+            }
+
+            .post {
+                font-weight: 700;
+                font-size: 36px;
+                margin-right: 25%;
+                margin-left: 24px;
+
+                @media screen and (min-width: @bp-huge) {
+                    margin-left: 72px;
+                }
+
+            }
+
+            .cta { 
+                transition: @trans;
+                font-size: 24px;
+                display: inline-block;
+                margin-top: 24px;
+                padding: 12px 24px;
+                background-color: fade(@brand-primary, 50%);
+                color: @white;
+                font-weight: 700;
+                border-left: solid 24px @brand-primary;
+
+                @media screen and (min-width: @bp-huge) {
+                    border-left-width: 72px;
+                }
+
+                                
+                &:hover {
+                    background-color: fade(@brand-primary, 90%);
+                    border-bottom-color: @white;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 
     .slide.first {
@@ -377,6 +466,8 @@ footer {
     .slide.second {
         background-image: url(../img/home_hero_2.jpg);
     }
+
+    
 }
 
 // Buttons 
@@ -388,13 +479,13 @@ footer {
 
 // Modals
 
-.modal.fromTop {
+.modal {
     padding: 0!important;
     .modal-dialog {
         width: 100%;
         max-width: 100%;
         margin: 0;
-        box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, .3);
+        box-shadow: none;
 
         .modal-content {
             border: none;
@@ -405,6 +496,49 @@ footer {
                 margin-top: 24px;
             }
 
+        }
+    }
+
+    &.fullScreen .modal-dialog {
+         .modal-content {
+            height: 100vh;
+            background: fade(@brand-primary, 98%);
+
+            .modal-header {
+                border-bottom: none;
+
+                
+                .modal-title {
+                    display: block;
+                    font-size: 2.4em;
+                    font-weight: 700;
+                    color: @brand-dk;
+                    margin-top: -36px;
+                    margin-left: 24px;
+
+                    @media screen and (min-width: @bp-large) {
+                        margin-top: -24px;
+                        margin-left: 48px;
+                        font-size: 4.8em;
+                    }
+                }
+    
+                button.close {
+                    transform: scale(1.5, 1.5);
+                    margin-top: -26px;
+                    margin-right: 16px;
+
+                    @media screen and (min-width: @bp-large) {
+                        transform: scale(3, 3);
+                        margin-top: 18px;
+                        margin-right: 48px;
+    
+                    }
+
+                }
+    
+            }
+    
         }
     }
 }
@@ -547,9 +681,5 @@ footer {
 
             
         }
-
-
-
-        
     }
 }
