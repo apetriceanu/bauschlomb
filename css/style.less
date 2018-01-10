@@ -48,6 +48,21 @@ body {
     line-height: 1.8;
 }
 
+a {
+    color: @brand-primary;
+    transition: @trans;
+
+    &:hover {
+        color: @brand-dk;
+        text-decoration: none;
+    }
+
+    &:active, &:focus {
+        color: @brand-xdk
+    }
+    
+}
+
 // General UI
 
 .container-fluid {
@@ -225,6 +240,38 @@ footer {
         background: url(../img/logo_bauschlomb.svg) left center no-repeat;
         height: 16px;
         margin-bottom: 18px;
+    }
+
+    a.social {
+        display: inline-block;
+        margin: 12px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+
+    .footerNav {
+        display: block;
+        font-weight: 700;
+        color: @gray-md;
+        transition: @trans;
+
+        &::before {
+            content: '+';
+            margin-right: 12px;
+            font-weight: 900;
+            color: @gray-lt;
+            transition: @trans; 
+        }
+
+        &:hover {
+            color: @brand-primary;
+
+            &::before {
+                color: @brand-dk;
+            }
+        }
     }
 
     .col.links {
@@ -440,18 +487,18 @@ footer {
                 display: inline-block;
                 margin-top: 24px;
                 padding: 12px 24px;
-                background-color: fade(@brand-primary, 50%);
+                background-color: fade(@brand-primary, 90%);
                 color: @white;
                 font-weight: 700;
-                border-left: solid 24px @brand-primary;
+                margin-left: 24px;
 
                 @media screen and (min-width: @bp-huge) {
-                    border-left-width: 72px;
+                    margin-left: 72px;
                 }
 
                                 
                 &:hover {
-                    background-color: fade(@brand-primary, 90%);
+                    background-color: @brand-primary;
                     border-bottom-color: @white;
                     text-decoration: none;
                 }

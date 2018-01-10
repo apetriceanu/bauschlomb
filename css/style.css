@@ -14,6 +14,18 @@ body {
   font-size: 20px;
   line-height: 1.8;
 }
+a {
+  color: #26B1BD;
+  transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+a:hover {
+  color: #009aa6;
+  text-decoration: none;
+}
+a:active,
+a:focus {
+  color: #003138;
+}
 @media screen and (min-width: 1200px) {
   .container-fluid {
     padding-left: 48px;
@@ -156,6 +168,32 @@ footer .logo {
   background: url(../img/logo_bauschlomb.svg) left center no-repeat;
   height: 16px;
   margin-bottom: 18px;
+}
+footer a.social {
+  display: inline-block;
+  margin: 12px;
+}
+footer a.social:first-of-type {
+  margin-left: 0;
+}
+footer .footerNav {
+  display: block;
+  font-weight: 700;
+  color: #9E9E9E;
+  transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+footer .footerNav::before {
+  content: '+';
+  margin-right: 12px;
+  font-weight: 900;
+  color: #ECF2F6;
+  transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+footer .footerNav:hover {
+  color: #26B1BD;
+}
+footer .footerNav:hover::before {
+  color: #009aa6;
 }
 footer .col.links {
   text-align: right;
@@ -333,18 +371,18 @@ footer .col.links .btn-link {
   display: inline-block;
   margin-top: 24px;
   padding: 12px 24px;
-  background-color: rgba(38, 177, 189, 0.5);
+  background-color: rgba(38, 177, 189, 0.9);
   color: #fff;
   font-weight: 700;
-  border-left: solid 24px #26B1BD;
+  margin-left: 24px;
 }
 @media screen and (min-width: 1200px) {
   .carousel-inner .carousel-item .content .cta {
-    border-left-width: 72px;
+    margin-left: 72px;
   }
 }
 .carousel-inner .carousel-item .content .cta:hover {
-  background-color: rgba(38, 177, 189, 0.9);
+  background-color: #26B1BD;
   border-bottom-color: #fff;
   text-decoration: none;
 }
