@@ -12,6 +12,7 @@
 
 @gray-alt:      #f9fafb;
 @gray-alt-md:   #c7daed;
+@gray-alt-dk:   #6584a3;
 
 @white:         #fff;
 @black-default: #212529;
@@ -269,14 +270,14 @@ footer {
     .footerNav {
         display: block;
         font-weight: 700;
-        color: @gray-md;
+        color: @gray-alt-dk;
         transition: @trans;
 
         &::before {
             content: '+';
             margin-right: 12px;
             font-weight: 900;
-            color: @gray-lt;
+            color: @gray-alt-md;
             transition: @trans; 
         }
 
@@ -406,43 +407,6 @@ footer {
         }
 
 
-    }
-}
-
-
-
-
-.prodCard {
-    padding: 24px;
-    display: block;
-    border-radius: 2px;
-    height: 100%;
-    transition: @trans;
-    text-decoration: none;
-    color: @black-default;
-    box-shadow: 0px 2px 12px 0px fade(@gray-dk, 50%);
-    text-align: center;
-
-    .icon {
-        text-align: center;
-        margin-bottom: 48px;
-        color: @brand-primary;
-        margin-top: 24px;
-
-        .inner {
-            background: #fff;
-            padding: 29px 24px 19px 24px;
-
-            .feather {
-                transform: scale(2);
-            }
-        }
-    }
-
-    .heading {
-        font-weight: bold;
-        margin-bottom: 24px;
-        text-align: center;
     }
 }
 
@@ -656,10 +620,6 @@ footer {
 // Product Page
 
 .product {
-    .chocolat-parent {
-        margin-bottom: 36px;
-    }
-
     .description {
         color: @gray-md;
     }
@@ -714,12 +674,11 @@ footer {
 
 // Product Page 2
 
-.productMain {
+.stageOuter {
     background: linear-gradient(to bottom, #fff, #f9fafb);
     border-bottom: 1px solid @gray-alt-md;
 
     .stage {
-
         margin-top: 36px;
         margin-bottom: 36px;
         
@@ -749,7 +708,12 @@ footer {
                 font-size: 1.8em;
                 margin-bottom: 48px;
             }
+        }
 
+        .pageTitle, .subtitle, .lead {
+            @media screen and (min-width: @bp-huge) {
+                margin-right: 96px;
+            }
         }
 
         .productPicture {
@@ -758,86 +722,87 @@ footer {
             }
         }
     }
+}
 
-
-    // deprecated code
-
-
-    .hero-outer {
-        background: linear-gradient(to bottom right, @brand-primary, @brand-dk);
-        padding: 72px 48px;
-        margin: 48px 33px;
-        color: @white;
-
-        &.bg1 {
-            background: url(../img/prod_largebg_plane.jpg) center no-repeat;
-            background-size: cover;
-        }
-
-        .productName {
-            font-size: 48px;
-            font-weight: bold;
-
-            &::after {
-                display: block;
-                content: '';
-                height: 6px;
-                width: 48px;
-                background: @brand-primary;
-                margin: 24px 0 48px 0;
-            }
-        }
-
-        .subtitle {
-            margin-bottom: 48px;
-            font-size: 28px;
-            font-family: Georgia, serif;
-            
-        }
-
-        .description {
-            margin-right: 720px;
-
-            
-            @media screen and (max-width: 1400px) {
-                margin-right: 480px;
-            }
-
-            @media screen and (max-width: @bp-huge) {
-                margin-right: 0;
-                
-            }
-
-
-        }
+.benefitOuter {
+    @media screen and (min-width: @bp-med) {
+        margin-top: 48px;
+        margin-bottom: 48px;
     }
 
-    .productImage {
-        width: 640px;
-        height: 480px;
-        position: relative;
-        right: 69px;
-        float: right;
-        top: -360px;
-        margin-bottom: -420px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+    @media screen and (min-width: @bp-large) {
+        margin-top: 72px;
+        margin-bottom: 72px;
+    }
+    .col-lg {
 
+        @media screen and (max-width: @bp-med) {
+            border-bottom: 1px solid @gray-alt-md;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+
+        }
         
-        @media screen and (max-width: 1400px) {
-            width: 360px;
+        @media screen and (min-width: @bp-med) and (max-width: @bp-large) {
+            border-right: 1px solid @gray-alt-md;
+            border-bottom: 1px solid @gray-alt-md;
+
+            &:last-child, &:nth-last-child(2) {
+                border-bottom: none;
+            } 
         }
 
-        @media screen and (max-width: @bp-huge) {
-            float: none;
-            right: 0;
-            top: 0;
-            margin: 36px 33px;
-            height: 360px;
-            width: auto;
 
+        @media screen and (min-width: @bp-large) {
+            border-right: 1px solid @gray-alt-md;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+        
+        .benefit {
+            // padding: 48px 12px 32px 12px;
+            margin-top: 48px;
+            margin-bottom: 32px;
             
+            @media screen and (min-width: @bp-huge) {
+                // padding: 72px 12px 48px 12px;
+                margin-top: 24px;
+                margin-bottom: 24px;
+                padding-left: 36px;
+                padding-right: 36px;
+    
+            }
+        
+            .icon {
+                .feather {
+                    transform: scale(2, 2);
+                    color: @gray-alt-md;
+                    margin-left: 10px;
+                    margin-bottom: 36px;
+        
+        
+                    @media screen and (min-width: @bp-huge) {
+                        transform: scale(3, 3);
+                        margin-left: 20px;
+                        margin-bottom: 48px;
+                        
+                    }
+                }
+            }
+        
+            .heading {
+                color: @brand-primary;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+        
+            p {
+        
+            }
         }
     }
 }
