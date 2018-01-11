@@ -333,9 +333,6 @@ footer .col.links .btn-link {
   margin-bottom: 24px;
   text-align: center;
 }
-.carousel-indicators {
-  justify-content: right;
-}
 .carousel-inner .carousel-item {
   height: 480px;
   background-size: cover;
@@ -549,6 +546,45 @@ footer .col.links .btn-link {
   height: 16px;
   vertical-align: top;
   margin-top: 5px;
+}
+.productMain {
+  background: linear-gradient(to bottom, #fff, #f9fafb);
+  border-bottom: 1px solid #c7daed;
+}
+.productMain .stage {
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+@media screen and (min-width: 1200px) {
+  .productMain .stage {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+.productMain .stage .pageTitle {
+  color: #26B1BD;
+  font-weight: 100;
+  font-size: 2.4em;
+}
+@media screen and (min-width: 1200px) {
+  .productMain .stage .pageTitle {
+    font-size: 3.6em;
+  }
+}
+.productMain .stage .subtitle {
+  color: #003138;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .productMain .stage .subtitle {
+    font-size: 1.8em;
+    margin-bottom: 48px;
+  }
+}
+.productMain .stage .productPicture img {
+  width: 100%;
 }
 .productMain .hero-outer {
   background: linear-gradient(to bottom right, #26B1BD, #009aa6);
