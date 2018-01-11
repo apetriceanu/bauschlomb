@@ -76,7 +76,18 @@ a:focus {
 .navbar .navbar-nav .nav-item {
   font-weight: bold;
   transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
-  font-size: 1.2em;
+  font-size: 0.75em;
+}
+@media screen and (min-width: 1200px) {
+  .navbar .navbar-nav .nav-item {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .navbar .navbar-nav .nav-item {
+    margin: 0 12px;
+    font-size: 1.2em;
+  }
 }
 .navbar .navbar-nav .nav-item .nav-link {
   transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
@@ -262,9 +273,15 @@ footer .col.links .btn-link {
 }
 .cardRows .card .heading {
   font-weight: 900;
-  font-size: 2em;
-  margin-bottom: 24px;
+  font-size: 1.6em;
+  margin-bottom: 12px;
   color: #26B1BD;
+}
+@media screen and (min-width: 1200px) {
+  .cardRows .card .heading {
+    font-size: 2em;
+    margin-bottom: 24px;
+  }
 }
 .cardRows .card .content {
   color: #616161;
@@ -286,13 +303,6 @@ footer .col.links .btn-link {
 }
 .cardRows .card:hover .content {
   color: #fff;
-}
-@media screen and (max-width: 992px) {
-  .cardRows .col-lg {
-    margin-top: 72px;
-    margin-bottom: 12px;
-    color: #fff;
-  }
 }
 .prodCard {
   padding: 24px;
@@ -342,23 +352,47 @@ footer .col.links .btn-link {
   top: 50%;
   transform: translateY(-50%);
 }
+@media screen and (min-width: 1200px) {
+  .carousel-inner .carousel-item .content {
+    margin-right: 40%;
+  }
+}
 .carousel-inner .carousel-item .content .heading {
-  font-weight: 900;
-  font-size: 64px;
+  font-weight: 100;
+  font-size: 36px;
   color: #fff;
   margin-left: 24px;
+  margin-right: 24px;
+  line-height: 1.2;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .carousel-inner .carousel-item .content .heading {
+    font-size: 64px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .carousel-inner .carousel-item .content .heading {
     font-size: 96px;
     margin-left: 72px;
+    margin-bottom: 24px;
   }
 }
 .carousel-inner .carousel-item .content .post {
   font-weight: 700;
-  font-size: 36px;
-  margin-right: 25%;
+  font-size: 18px;
   margin-left: 24px;
+  margin-right: 24px;
+  line-height: 1.2;
+  color: #003138;
+}
+.carousel-inner .carousel-item .content .post.light {
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .carousel-inner .carousel-item .content .post {
+    font-size: 36px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .carousel-inner .carousel-item .content .post {
@@ -446,6 +480,29 @@ footer .col.links .btn-link {
     margin-top: 18px;
     margin-right: 48px;
   }
+}
+.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group input[type=text] {
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+  color: #fff;
+}
+.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary {
+  background: none;
+  transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary:hover {
+  color: #009aa6;
+  background: none;
+  border-color: rgba(255, 255, 255, 0);
+}
+.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary:active,
+.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary:focus {
+  border-color: transparent;
+  box-shadow: none;
 }
 .product .chocolat-parent {
   margin-bottom: 36px;
