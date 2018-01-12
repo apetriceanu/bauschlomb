@@ -161,10 +161,29 @@
                             <button type="submit" class="btn btn-primary btn-lg">Trimite mesaj</button>
                         </div>
                     </form>
-                    <!-- <a href="#" class="btn btn-lg btn-primary">Specificatii tehnice (pdf)</a> -->
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid nomargins">
+                <div class="row contentBlock no-gutters">
+                    <div class="col-lg-8">
+                        <div class="map"></div>
+                    </div>
+                    <div class="col-lg-4 contentArea white">
+                        <div class="iconDot"><i data-feather="map-pin"></i></div>
+                        <h3 class="heading">Viziteaza-ne</h3>
+                        <p class="nomargin"><strong>Bausch + Lomb Vision Care</strong></p>
+                        <p class="nomargin">Visionaria SRL</p>
+                        <p class="nomargin">B-dul Grivitei 1A, Brasov</p>
+                        <p class="nomargin">tel.: +40 268 42 32 26</p>
+                        <p class="nomargin"><a href="mailto:contact@bausch.ro">contact@bausch.ro</a></p>
+                    </div>
+                </div>
+            </div>
+    
+
+        <div id="contactMap"></div>
         
     <!-- Footer -->
     <footer>
@@ -224,14 +243,37 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
-    
     <script src="node_modules/feather-icons/dist/feather.min.js"></script>
+
+    <!-- Maps  -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD-P3zhNdkfuvtdBxiNyv6SF9ImD3MXrHY"></script>
+    <script src="node_modules/gmaps/gmaps.min.js"></script>
+
+
     <script src="node_modules/pace-js/pace.min.js"></script>
     <script>
+
             $(document).ready(function(){
                 $('.chocolat-parent').Chocolat();
     
                 feather.replace();
+            });
+
+            // Maps part
+
+            var map;
+
+            $(document).ready(function(){
+            map = new GMaps({
+                div: '.map',
+                lat:  45.6622415,
+                lng:  25.5924598
+            });
+            map.addMarker({
+                lat: 45.6622415,
+                lng: 25.5924598,
+                title: 'Bausch + Lomb Romania',
+            });
             });
     </script>
     

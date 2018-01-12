@@ -32,6 +32,10 @@ a:focus {
     padding-right: 48px;
   }
 }
+.container-fluid.nomargins {
+  padding-left: 0;
+  padding-right: 0;
+}
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -683,6 +687,9 @@ textarea.form-control:focus {
   font-weight: 700;
   margin-bottom: 24px;
 }
+.contentBlock {
+  margin-bottom: 48px;
+}
 .contentBlock .sideImage {
   height: 100%;
   background-size: cover;
@@ -700,8 +707,19 @@ textarea.form-control:focus {
 .contentBlock .sideImage.siContact {
   background-image: url(../img/sideImg_02.jpg);
 }
+.contentBlock .map {
+  height: 480px;
+}
+@media screen and (min-width: 992px) {
+  .contentBlock .map {
+    height: 100%;
+  }
+}
 .contentBlock .contentArea {
   background: #f9fafb;
+}
+.contentBlock .contentArea.white {
+  background: #fff;
 }
 @media screen and (max-width: 992px) {
   .contentBlock .contentArea {
@@ -785,4 +803,22 @@ textarea.form-control:focus {
 .contentBlock .contentArea form button.btn {
   margin-left: 0;
   margin-top: 48px;
+}
+.contentBlock .contentArea p {
+  padding-left: 12px;
+}
+@media screen and (min-width: 992px) {
+  .contentBlock .contentArea p {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contentBlock .contentArea p {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+.contentBlock .contentArea p.nomargin {
+  margin-bottom: 0;
 }
