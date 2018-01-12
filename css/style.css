@@ -98,6 +98,12 @@ a:focus {
   transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
   font-size: 0.75em;
 }
+.navbar .navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+.navbar .navbar-nav .nav-item:last-child a.nav-link {
+  padding-right: 0;
+}
 @media screen and (min-width: 1200px) {
   .navbar .navbar-nav .nav-item {
     font-size: 1em;
@@ -431,6 +437,13 @@ footer .col.links .btn-link {
   background-color: #003138 !important;
   box-shadow: 0 0 0 0.2rem rgba(38, 177, 189, 0.5) !important;
 }
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+textarea.form-control:focus {
+  border-color: rgba(38, 177, 189, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(38, 177, 189, 0.25);
+}
 .modal {
   padding: 0!important;
 }
@@ -551,6 +564,11 @@ footer .col.links .btn-link {
 .stageOuter {
   background: linear-gradient(to bottom, #fff, #f9fafb);
   border-bottom: 1px solid #c7daed;
+  margin-bottom: 48px;
+}
+.stageOuter.noBg {
+  background: none;
+  border-bottom: none;
 }
 .stageOuter .stage {
   margin-top: 36px;
@@ -628,6 +646,9 @@ footer .col.links .btn-link {
   .benefitOuter .col-lg {
     border-right: 1px solid #c7daed;
   }
+  .benefitOuter .col-lg:first-child .benefit {
+    padding-left: 0;
+  }
   .benefitOuter .col-lg:last-child {
     border-right: none;
   }
@@ -662,42 +683,45 @@ footer .col.links .btn-link {
   font-weight: 700;
   margin-bottom: 24px;
 }
-.downloadBlock .sideImage {
+.contentBlock .sideImage {
   height: 100%;
   background-size: cover;
   background-position: center;
   width: 100%;
 }
 @media screen and (max-width: 992px) {
-  .downloadBlock .sideImage {
+  .contentBlock .sideImage {
     height: 64px;
   }
 }
-.downloadBlock .sideImage.si01 {
+.contentBlock .sideImage.si01 {
   background-image: url(../img/sideImg_01.jpg);
 }
-.downloadBlock .contentArea {
+.contentBlock .sideImage.siContact {
+  background-image: url(../img/sideImg_02.jpg);
+}
+.contentBlock .contentArea {
   background: #f9fafb;
 }
 @media screen and (max-width: 992px) {
-  .downloadBlock .contentArea {
+  .contentBlock .contentArea {
     padding-top: 12px;
     padding-bottom: 36px;
   }
 }
 @media screen and (min-width: 992px) {
-  .downloadBlock .contentArea {
+  .contentBlock .contentArea {
     padding-top: 36px;
     padding-bottom: 36px;
   }
 }
-.downloadBlock .contentArea .iconDot {
+.contentBlock .contentArea .iconDot {
   float: left;
   line-height: 1em;
-  padding: 21px 24px;
+  padding: 21px 24px 0 24px;
 }
 @media screen and (min-width: 992px) {
-  .downloadBlock .contentArea .iconDot {
+  .contentBlock .contentArea .iconDot {
     background: #fff;
     border-radius: 999px;
     padding: 21px 24px;
@@ -706,33 +730,59 @@ footer .col.links .btn-link {
     left: -36px;
   }
 }
-.downloadBlock .contentArea .iconDot .feather {
+.contentBlock .contentArea .iconDot .feather {
   color: #6584a3;
 }
 @media screen and (min-width: 992px) {
-  .downloadBlock .contentArea .iconDot .feather {
+  .contentBlock .contentArea .iconDot .feather {
     color: #6584a3;
   }
 }
 @media screen and (min-width: 1200px) {
-  .downloadBlock .contentArea {
+  .contentBlock .contentArea {
     padding-top: 48px;
     padding-bottom: 48px;
   }
 }
-.downloadBlock .contentArea .heading {
+.contentBlock .contentArea .heading {
   color: #26B1BD;
   font-weight: 700;
   margin-top: 16px;
   padding-bottom: 12px;
 }
 @media screen and (min-width: 992px) {
-  .downloadBlock .contentArea .heading {
+  .contentBlock .contentArea .heading {
     padding-bottom: 36px;
   }
 }
 @media screen and (min-width: 992px) {
-  .downloadBlock .contentArea .btn {
+  .contentBlock .contentArea .btn {
     margin-left: 72px;
   }
+}
+.contentBlock .contentArea form {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media screen and (min-width: 992px) {
+  .contentBlock .contentArea form {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contentBlock .contentArea form {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+.contentBlock .contentArea form .form-check {
+  margin-left: 6px;
+}
+.contentBlock .contentArea form .form-check .form-check-input {
+  margin-top: 10px;
+}
+.contentBlock .contentArea form button.btn {
+  margin-left: 0;
+  margin-top: 48px;
 }

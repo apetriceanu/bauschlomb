@@ -146,6 +146,14 @@ a {
             font-weight: bold;
             transition: @trans;
             font-size: 0.75em;
+
+            &:last-child {
+                margin-right: 0;
+
+                a.nav-link {
+                    padding-right: 0;
+                }
+            }
             
             @media screen and (min-width: @bp-huge) {
                 font-size: 1em;                
@@ -560,6 +568,15 @@ footer {
     }
 }
 
+// Forms and inputs (general)
+
+input[type=text], input[type=password], input[type=email], textarea.form-control {
+    &:focus {
+        border-color: fade(@brand-primary, 50%);
+        box-shadow: 0 0 0 .2rem fade(@brand-primary, 25%);
+    }
+}
+
 // Modals
 
 .modal {
@@ -714,6 +731,12 @@ footer {
 .stageOuter {
     background: linear-gradient(to bottom, #fff, #f9fafb);
     border-bottom: 1px solid @gray-alt-md;
+    margin-bottom: 48px;
+
+    &.noBg {
+        background: none;
+        border-bottom: none;
+    }
 
     .stage {
         margin-top: 36px;
@@ -779,6 +802,7 @@ footer {
                 border-bottom: none;
             }
 
+
         }
         
         @media screen and (min-width: @bp-med) and (max-width: @bp-large) {
@@ -794,18 +818,20 @@ footer {
         @media screen and (min-width: @bp-large) {
             border-right: 1px solid @gray-alt-md;
 
+            &:first-child .benefit {
+                padding-left: 0;
+            }
+
             &:last-child {
                 border-right: none;
             }
         }
         
         .benefit {
-            // padding: 48px 12px 32px 12px;
             margin-top: 48px;
             margin-bottom: 32px;
             
             @media screen and (min-width: @bp-huge) {
-                // padding: 72px 12px 48px 12px;
                 margin-top: 24px;
                 margin-bottom: 24px;
                 padding-left: 36px;
@@ -840,7 +866,7 @@ footer {
     }
 }
 
-.downloadBlock {
+.contentBlock {
     .sideImage {
         height: 100%;
         background-size: cover;
@@ -853,6 +879,9 @@ footer {
 
         &.si01 {
             background-image: url(../img/sideImg_01.jpg);
+        }
+        &.siContact {
+            background-image: url(../img/sideImg_02.jpg);
         }
     }
 
@@ -872,7 +901,7 @@ footer {
         .iconDot {
             float: left;
             line-height: 1em;
-            padding: 21px 24px;
+            padding: 21px 24px 0 24px;
 
             @media screen and (min-width: @bp-large) {  
                 background: @white;
@@ -911,6 +940,34 @@ footer {
         .btn {
             @media screen and (min-width: @bp-large) {
                 margin-left: 72px;
+            }
+        }
+
+        form {
+            padding-left: 24px;
+            padding-right: 24px;
+
+            @media screen and (min-width: @bp-large) {
+                padding-left: 48px;
+                padding-right: 48px;
+            }
+
+            @media screen and (min-width: @bp-huge) {
+                padding-left: 72px;
+                padding-right: 72px;
+            }
+
+            .form-check {
+                margin-left: 6px;
+
+                .form-check-input {
+                    margin-top: 10px;
+                }
+            }
+
+            button.btn {
+                margin-left: 0;
+                margin-top: 48px;;
             }
         }
     }
