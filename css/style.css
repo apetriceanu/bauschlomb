@@ -394,9 +394,22 @@ footer .col.links .btn-link {
 .carousel-inner .slide.second {
   background-image: url(../img/home_hero_2.jpg);
 }
+.btn {
+  border-radius: 1px;
+}
 .btn-primary {
   background-color: #26B1BD;
   border-color: #26B1BD;
+}
+.btn-primary:hover {
+  background-color: #009aa6;
+  border-color: #009aa6;
+  box-shadow: 0 4px 10px rgba(38, 177, 189, 0.5);
+}
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #003138 !important;
+  box-shadow: 0 0 0 0.2rem rgba(38, 177, 189, 0.5) !important;
 }
 .modal {
   padding: 0!important;
@@ -628,4 +641,78 @@ footer .col.links .btn-link {
   color: #26B1BD;
   font-weight: 700;
   margin-bottom: 24px;
+}
+.downloadBlock .sideImage {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .downloadBlock .sideImage {
+    height: 64px;
+  }
+}
+.downloadBlock .sideImage.si01 {
+  background-image: url(../img/sideImg_01.jpg);
+}
+.downloadBlock .contentArea {
+  background: #f9fafb;
+}
+@media screen and (max-width: 992px) {
+  .downloadBlock .contentArea {
+    padding-top: 12px;
+    padding-bottom: 36px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .downloadBlock .contentArea {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+.downloadBlock .contentArea .iconDot {
+  float: left;
+  line-height: 1em;
+  padding: 21px 24px;
+}
+@media screen and (min-width: 992px) {
+  .downloadBlock .contentArea .iconDot {
+    background: #fff;
+    border-radius: 999px;
+    padding: 21px 24px;
+    box-shadow: 0 2px 4px rgba(33, 37, 41, 0.1), 0 7px 14px rgba(33, 37, 41, 0.1);
+    position: relative;
+    left: -36px;
+  }
+}
+.downloadBlock .contentArea .iconDot .feather {
+  color: #6584a3;
+}
+@media screen and (min-width: 992px) {
+  .downloadBlock .contentArea .iconDot .feather {
+    color: #6584a3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .downloadBlock .contentArea {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+.downloadBlock .contentArea .heading {
+  color: #26B1BD;
+  font-weight: 700;
+  margin-top: 16px;
+  padding-bottom: 12px;
+}
+@media screen and (min-width: 992px) {
+  .downloadBlock .contentArea .heading {
+    padding-bottom: 36px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .downloadBlock .contentArea .btn {
+    margin-left: 72px;
+  }
 }

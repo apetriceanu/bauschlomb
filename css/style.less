@@ -42,12 +42,13 @@
     }
 }
 
+
 // Typography
 
 body {
     font-family: 'Catamaran', Arial, sans-serif;
     font-size: 20px;
-    line-height: 1.8;
+    line-height: 1.8;    
 }
 
 a {
@@ -515,9 +516,24 @@ footer {
 
 // Buttons 
 
+.btn {
+    border-radius: 1px;
+}
+
 .btn-primary {
     background-color: @brand-primary;
     border-color: @brand-primary;
+
+    &:hover {
+        background-color: @brand-dk;
+        border-color: @brand-dk;
+        box-shadow: 0 4px 10px fade(@brand-primary, 50%);
+    }
+
+    &:active, &:focus {
+        background-color: @brand-xdk!important;
+        box-shadow: 0 0 0 .2rem fade(@brand-primary, 50%)!important;
+    }
 }
 
 // Modals
@@ -802,6 +818,82 @@ footer {
         
             p {
         
+            }
+        }
+    }
+}
+
+.downloadBlock {
+    .sideImage {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+
+        @media screen and (max-width: @bp-large) {
+            height: 64px;
+        }
+
+        &.si01 {
+            background-image: url(../img/sideImg_01.jpg);
+        }
+    }
+
+    .contentArea {
+        background: @gray-alt;
+
+        @media screen and (max-width: @bp-large) {
+            padding-top: 12px;
+            padding-bottom: 36px;
+        }
+        
+        @media screen and (min-width: @bp-large) {
+            padding-top: 36px;
+            padding-bottom: 36px;
+        }
+
+        .iconDot {
+            float: left;
+            line-height: 1em;
+            padding: 21px 24px;
+
+            @media screen and (min-width: @bp-large) {  
+                background: @white;
+                border-radius: 999px;
+                padding: 21px 24px;
+                box-shadow: 0 2px 4px rgba(33,37,41,.1),0 7px 14px rgba(33,37,41,.1);
+                position: relative;
+                left: -36px;
+            }
+
+            .feather {
+                color: @gray-alt-dk;
+
+                @media screen and (min-width: @bp-large) {
+                    color: @gray-alt-dk;
+                }
+            }
+        }
+
+        @media screen and (min-width: @bp-huge) {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .heading {
+            color: @brand-primary;
+            font-weight: 700;
+            margin-top: 16px;
+            padding-bottom: 12px;
+
+            @media screen and (min-width: @bp-large) {
+                padding-bottom: 36px;
+            }
+        }
+
+        .btn {
+            @media screen and (min-width: @bp-large) {
+                margin-left: 72px;
             }
         }
     }
