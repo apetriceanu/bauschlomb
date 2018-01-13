@@ -73,7 +73,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarAfectiuni" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            Afectiuni oculare
+                            Afectiuni
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarAfectiuni">
                             <a class="dropdown-item" href="#">Vedere imperfecta</a>
@@ -89,7 +89,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDespre">
                             <a class="dropdown-item" href="#">Despre noi</a>
                             <a class="dropdown-item" href="#">Noutati</a>
-                            <a class="dropdown-item" href="#">Newsletter</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#newsletterModal">Newsletter</a>
                             <a class="dropdown-item" href="#">Contact</a>
                         </div>
                     </li>
@@ -220,7 +220,7 @@
                     <a href="#" class="footerNav">Catalog produse</a>
                     <a href="#" class="footerNav">Despre noi</a>
                     <a href="#" class="footerNav">Noutati</a>
-                    <a href="#" class="footerNav">Newsletter</a>
+                    <a href="#" class="footerNav" data-toggle="modal" data-target="#newsletterModal">Newsletter</a>
                     <a href="#" class="footerNav">Contact</a>
                 </div>
             </div>
@@ -228,7 +228,7 @@
     </footer>
 
     <!-- Modals -->
-
+    
     <div class="modal fade fullScreen" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="false">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -242,9 +242,11 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Cauta" aria-label="Cauta">
-                                    </div>
+                                    <form action="" class="lighter">
+                                        <div class="input-group">
+                                            <input type="text" id="searchInput" class="form-control" placeholder="Cauta" aria-label="Cauta">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +254,54 @@
                 </div>
             </div>
         </div>
-
+    
+        <div class="modal fade fullScreen" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModal" aria-hidden="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">Newsletter</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i data-feather="x-circle"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 col-md-8 col-sm-12">
+                                    <div class="introText">Inscrie-te pentru a fi la curent cu toate noutatile si ofertele speciale Bausch + Lomb.</div>
+                                    <form action="" class="lighter">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="contact-fname">Nume</label>
+                                                    <input type="text" class="form-control" placeholder="" id="contact-fname">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="contact-lname">Prenume</label>
+                                                    <input type="text" class="form-control" placeholder="" id="contact-lname">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="contact-email">Adresa e-mail</label>
+                                                    <input type="email" class="form-control" placeholder="" id="contact-email">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="contact-phone">Telefon</label>
+                                                    <input type="text" class="form-control" placeholder="" id="contact-phone">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <button type="submit" class="btn btn-primary btn-lg">Inscriere</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
     <!-- Scripts -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -267,6 +316,11 @@
     
                 feather.replace();
             });
+
+            $('#searchModal').on('shown.bs.modal', function() {
+            $('#searchInput').focus();
+        });
+
     </script>
     
     <!-- Scripts:dev // not needed for production -->

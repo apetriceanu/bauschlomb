@@ -375,7 +375,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        margin-bottom: 36px;
+        // margin-bottom: 36px;
     }
 
     .card {
@@ -441,6 +441,51 @@ footer {
         }
 
 
+    }
+}
+
+.finalAction {
+    background-color: @gray-alt-md;
+    font-size: 1.2em;
+    color: @white;
+    font-weight: 700;
+
+    @media screen and (min-width: @bp-large) {
+        font-size: 1.8em;
+    }
+
+    .feather {
+        color: @gray-alt-dk;
+        transform: scale(1.4);
+        margin-right: 24px;
+    }
+
+    .text {
+        padding: 24px 36px;
+        display: inline-block;
+    }
+
+    .cta {
+        background: @gray-alt-dk;
+        padding: 24px 36px!important;
+        cursor: pointer;
+
+        @media screen and (max-width: @bp-med) {
+            width: 100%;
+            display: block;
+        }
+
+        @media screen and (min-width: @bp-med) {
+            float: right;
+        }
+
+        &:hover {
+            background-color: @brand-dk;
+        }
+
+        &:active, &:focus {
+            background-color: @brand-xdk;   
+        }
     }
 }
 
@@ -570,13 +615,33 @@ footer {
 }
 
 // Forms and inputs (general)
-
+/*
 input[type=text], input[type=password], input[type=email], textarea.form-control {
     &:focus {
         border-color: fade(@brand-primary, 50%);
         box-shadow: 0 0 0 .2rem fade(@brand-primary, 25%);
     }
 }
+*/
+
+input[type=text], input[type=password], input[type=email], textarea.form-control {
+        border-radius: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid @gray-alt-md;
+        padding: .75rem .75rem; 
+
+        &:hover {
+            box-shadow: 0 2px 4px rgba(33,37,41,.02),0 7px 14px rgba(33,37,41,.05);
+        }
+
+        &:focus {
+            border-bottom-color: @brand-primary;
+            box-shadow: 0 2px 4px rgba(33,37,41,.1),0 7px 14px rgba(33,37,41,.2);
+        }
+}
+
 
 // Modals
 
@@ -602,17 +667,16 @@ input[type=text], input[type=password], input[type=email], textarea.form-control
     &.fullScreen .modal-dialog {
          .modal-content {
             height: 100vh;
-            background: fade(@brand-primary, 98%);
+            background: fade(@brand-primary, 99%);
 
             .modal-header {
                 border-bottom: none;
-
-                
+             
                 .modal-title {
                     display: block;
                     font-size: 2.4em;
                     font-weight: 700;
-                    color: @brand-dk;
+                    color: @brand-xdk;
                     margin-top: -36px;
                     margin-left: 24px;
 
@@ -638,36 +702,21 @@ input[type=text], input[type=password], input[type=email], textarea.form-control
             }
 
             .modal-body {
-                .input-group {
-                    input[type=text] {
-                        background: none;
-                        border-top: none;
-                        border-left: none;
-                        border-right: none;
-                        border-bottom: 2px solid @white;
-                        border-radius: 0;
-                        color: @white;
-                    }
-
-                    .btn.btn-primary {
-                        background: none;
-                        transition: @trans;
-
-                        &:hover {
-                            color: @brand-dk;
-                            background: none;
-                            border-color: rgba(255,255,255,0);
-                        }
-
-                        &:active, &:focus {
-                            border-color: transparent;
-                            box-shadow: none;
-                        }
-                    }
-    
+                .introText {
+                    color: @white;
+                    font-size: 1.4em;
+                    line-height: 1.2;
+                    margin-bottom: 36px;
                 }
-            }
-    
+
+                .btn-primary {
+                    background-color: @brand-xdk;
+
+                    &:hover {
+                        background-color: @brand-dk;
+                    }
+                }
+            }    
         }
     }
 }

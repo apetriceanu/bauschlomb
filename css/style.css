@@ -274,7 +274,6 @@ footer .col.links .btn-link {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-bottom: 36px;
   }
 }
 .cardRows .card {
@@ -330,6 +329,49 @@ footer .col.links .btn-link {
 }
 .cardRows .card:hover .content {
   color: #fff;
+}
+.finalAction {
+  background-color: #c7daed;
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 700;
+}
+@media screen and (min-width: 992px) {
+  .finalAction {
+    font-size: 1.8em;
+  }
+}
+.finalAction .feather {
+  color: #6584a3;
+  transform: scale(1.4);
+  margin-right: 24px;
+}
+.finalAction .text {
+  padding: 24px 36px;
+  display: inline-block;
+}
+.finalAction .cta {
+  background: #6584a3;
+  padding: 24px 36px!important;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .finalAction .cta {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .finalAction .cta {
+    float: right;
+  }
+}
+.finalAction .cta:hover {
+  background-color: #009aa6;
+}
+.finalAction .cta:active,
+.finalAction .cta:focus {
+  background-color: #003138;
 }
 .carousel-inner .carousel-item {
   height: 480px;
@@ -438,12 +480,37 @@ footer .col.links .btn-link {
   background-color: #003138 !important;
   box-shadow: 0 0 0 0.2rem rgba(38, 177, 189, 0.5) !important;
 }
+/*
+input[type=text], input[type=password], input[type=email], textarea.form-control {
+    &:focus {
+        border-color: fade(@brand-primary, 50%);
+        box-shadow: 0 0 0 .2rem fade(@brand-primary, 25%);
+    }
+}
+*/
+input[type=text],
+input[type=password],
+input[type=email],
+textarea.form-control {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #c7daed;
+  padding: .75rem .75rem;
+}
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=email]:hover,
+textarea.form-control:hover {
+  box-shadow: 0 2px 4px rgba(33, 37, 41, 0.02), 0 7px 14px rgba(33, 37, 41, 0.05);
+}
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
 textarea.form-control:focus {
-  border-color: rgba(38, 177, 189, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(38, 177, 189, 0.25);
+  border-bottom-color: #26B1BD;
+  box-shadow: 0 2px 4px rgba(33, 37, 41, 0.1), 0 7px 14px rgba(33, 37, 41, 0.2);
 }
 .modal {
   padding: 0!important;
@@ -464,7 +531,7 @@ textarea.form-control:focus {
 }
 .modal.fullScreen .modal-dialog .modal-content {
   height: 100vh;
-  background: rgba(38, 177, 189, 0.98);
+  background: rgba(38, 177, 189, 0.99);
 }
 .modal.fullScreen .modal-dialog .modal-content .modal-header {
   border-bottom: none;
@@ -473,7 +540,7 @@ textarea.form-control:focus {
   display: block;
   font-size: 2.4em;
   font-weight: 700;
-  color: #009aa6;
+  color: #003138;
   margin-top: -36px;
   margin-left: 24px;
 }
@@ -496,28 +563,17 @@ textarea.form-control:focus {
     margin-right: 48px;
   }
 }
-.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group input[type=text] {
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid #fff;
-  border-radius: 0;
+.modal.fullScreen .modal-dialog .modal-content .modal-body .introText {
   color: #fff;
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-bottom: 36px;
 }
-.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary {
-  background: none;
-  transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+.modal.fullScreen .modal-dialog .modal-content .modal-body .btn-primary {
+  background-color: #003138;
 }
-.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary:hover {
-  color: #009aa6;
-  background: none;
-  border-color: rgba(255, 255, 255, 0);
-}
-.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary:active,
-.modal.fullScreen .modal-dialog .modal-content .modal-body .input-group .btn.btn-primary:focus {
-  border-color: transparent;
-  box-shadow: none;
+.modal.fullScreen .modal-dialog .modal-content .modal-body .btn-primary:hover {
+  background-color: #009aa6;
 }
 .product .description {
   color: #9E9E9E;
