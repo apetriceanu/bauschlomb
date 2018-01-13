@@ -346,6 +346,12 @@ footer .col.links .btn-link {
   transform: scale(1.4);
   margin-right: 24px;
 }
+@media screen and (max-width: 768px) {
+  .finalAction .feather {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
 .finalAction .text {
   padding: 24px 36px;
   display: inline-block;
