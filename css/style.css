@@ -536,7 +536,7 @@ textarea.form-control:focus {
   margin-top: 24px;
 }
 .modal.fullScreen .modal-dialog .modal-content {
-  height: 100vh;
+  min-height: 100vh;
   background: rgba(38, 177, 189, 0.99);
 }
 .modal.fullScreen .modal-dialog .modal-content .modal-header {
