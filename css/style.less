@@ -321,10 +321,6 @@ footer {
 
         &:hover {
             color: @brand-primary;
-
-            &::before {
-                color: @brand-dk;
-            }
         }
     }
 
@@ -1005,6 +1001,83 @@ input[type=text], input[type=password], input[type=email], textarea.form-control
                 margin-bottom: 0;
             }
             
+        }
+    }
+}
+
+.sectionHeader {
+    .heading {
+        color: @gray-alt-dk;
+        font-size: 2em;
+        font-weight: 100;
+        margin-bottom: 48px;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 64px;
+            background-color: @gray-alt-md;
+        }
+        
+        @media screen and (min-width: @bp-large) {
+            font-size: 3em;
+            margin-bottom: 64px;
+        }
+    }
+}
+
+.productGrid {
+    .productItem {
+        background-color: @gray-alt;
+        display: block;
+        padding: 48px 24px 24px 24px;
+        transition: @trans;
+        height: 100%;
+
+        @media screen and (max-width: @bp-small) {
+            padding-top: 24px;
+        }
+
+        &:hover {
+            background-color: @brand-primary;
+            box-shadow: 0 4px 10px fade(@brand-primary, 50%);
+            color: @white;
+
+        }
+
+        img {
+            max-width: 100%;
+            padding: 0 48px;
+
+            @media screen and (max-width: @bp-small) {
+                display: none;
+            }    
+        }
+
+        .heading {
+            display: block;
+            text-align: center;
+            font-weight: 700;
+            margin-top: 24px;
+
+            @media screen and (max-width: @bp-small) {
+                margin-top: 0;
+                text-align: left;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 64px;
+                background-color: @gray-alt-md;
+                margin: 0 auto 24px auto;
+
+                @media screen and (max-width: @bp-small) {
+                    display: none;
+                }
+            }
         }
     }
 }
