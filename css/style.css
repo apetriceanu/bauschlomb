@@ -32,6 +32,12 @@ a:focus {
     padding-right: 48px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container-fluid.extraMargins {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
 .container-fluid.nomargins {
   padding-left: 0;
   padding-right: 0;
@@ -486,14 +492,6 @@ footer .col.links .btn-link {
   background-color: #003138 !important;
   box-shadow: 0 0 0 0.2rem rgba(38, 177, 189, 0.5) !important;
 }
-/*
-input[type=text], input[type=password], input[type=email], textarea.form-control {
-    &:focus {
-        border-color: fade(@brand-primary, 50%);
-        box-shadow: 0 0 0 .2rem fade(@brand-primary, 25%);
-    }
-}
-*/
 input[type=text],
 input[type=password],
 input[type=email],
@@ -650,7 +648,7 @@ textarea.form-control:focus {
 }
 @media screen and (min-width: 1200px) {
   .stageOuter .stage .pageTitle {
-    font-size: 3.6em;
+    font-size: 3em;
   }
 }
 .stageOuter .stage .subtitle {
@@ -661,7 +659,7 @@ textarea.form-control:focus {
 }
 @media screen and (min-width: 1200px) {
   .stageOuter .stage .subtitle {
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-bottom: 48px;
   }
 }
@@ -674,6 +672,47 @@ textarea.form-control:focus {
 }
 .stageOuter .stage .productPicture img {
   width: 100%;
+  max-width: 580px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+@media screen and (max-width: 992px) {
+  .stageOuter .stage .productPicture .quickInfo {
+    margin: 24px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .stageOuter .stage .productPicture .quickInfo .col-sm {
+    border-bottom: 1px solid #c7daed;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  .stageOuter .stage .productPicture .quickInfo .col-sm:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .stageOuter .stage .productPicture .quickInfo .icon {
+    float: left;
+    padding-top: 5px;
+    height: 24px;
+    margin-right: 24px;
+  }
+}
+.stageOuter .stage .productPicture .quickInfo::before {
+  height: 1px;
+  width: 100%;
+  background: #c7daed;
+  content: '';
+  margin: 24px 0;
+}
+.stageOuter .stage .productPicture .quickInfo .icon {
+  color: #26B1BD;
+}
+.stageOuter .stage .productPicture .quickInfo .infoText {
+  color: #6584a3;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .benefitOuter {
