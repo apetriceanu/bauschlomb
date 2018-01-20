@@ -173,7 +173,7 @@ a {
 
             @media screen and (min-width: 1680px) {
                 margin: 0 12px;
-                font-size: 1.2em;
+                // font-size: 1.2em;
             }
 
             .nav-link {
@@ -839,11 +839,15 @@ input[type=text], input[type=password], input[type=email], textarea.form-control
             }
 
             .quickInfo {
+                text-align: center;
+                
+
                 @media screen and (max-width: @bp-large) {
                     margin: 24px 0;
                 }
 
                 @media screen and (max-width: @bp-small) {
+                    text-align: left;
                     .col-sm {
                         border-bottom: 1px solid @gray-alt-md;
                         padding-bottom: 24px;
@@ -862,23 +866,30 @@ input[type=text], input[type=password], input[type=email], textarea.form-control
                         height: 24px;
                         margin-right: 24px;
                     }
+
+                    &::before {
+                        height: 1px;
+                        width: 100%;
+                        background: @gray-alt-md;
+                        content: '';
+                        margin: 24px 0;
+                    }
+    
                 }
-                
-                &::before {
-                    height: 1px;
-                    width: 100%;
-                    background: @gray-alt-md;
-                    content: '';
-                    margin: 24px 0;
+
+                @media screen and (min-width: @bp-large) {
+                    margin-top: 48px;
                 }
 
                 .icon {
                     color: @brand-primary;
+                    text-align: center;
                 }
 
                 .infoText {
                     color: @gray-alt-dk;
                     font-weight: 700;
+                    
                 }
             }
         }

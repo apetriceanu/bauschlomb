@@ -122,7 +122,6 @@ a:focus {
 @media screen and (min-width: 1680px) {
   .navbar .navbar-nav .nav-item {
     margin: 0 12px;
-    font-size: 1.2em;
   }
 }
 .navbar .navbar-nav .nav-item .nav-link {
@@ -677,12 +676,18 @@ textarea.form-control:focus {
   margin-left: auto;
   display: block;
 }
+.stageOuter .stage .productPicture .quickInfo {
+  text-align: center;
+}
 @media screen and (max-width: 992px) {
   .stageOuter .stage .productPicture .quickInfo {
     margin: 24px 0;
   }
 }
 @media screen and (max-width: 576px) {
+  .stageOuter .stage .productPicture .quickInfo {
+    text-align: left;
+  }
   .stageOuter .stage .productPicture .quickInfo .col-sm {
     border-bottom: 1px solid #c7daed;
     padding-bottom: 24px;
@@ -699,16 +704,22 @@ textarea.form-control:focus {
     height: 24px;
     margin-right: 24px;
   }
+  .stageOuter .stage .productPicture .quickInfo::before {
+    height: 1px;
+    width: 100%;
+    background: #c7daed;
+    content: '';
+    margin: 24px 0;
+  }
 }
-.stageOuter .stage .productPicture .quickInfo::before {
-  height: 1px;
-  width: 100%;
-  background: #c7daed;
-  content: '';
-  margin: 24px 0;
+@media screen and (min-width: 992px) {
+  .stageOuter .stage .productPicture .quickInfo {
+    margin-top: 48px;
+  }
 }
 .stageOuter .stage .productPicture .quickInfo .icon {
   color: #26B1BD;
+  text-align: center;
 }
 .stageOuter .stage .productPicture .quickInfo .infoText {
   color: #6584a3;
